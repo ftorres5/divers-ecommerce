@@ -1,7 +1,12 @@
+import { useGetProductsQuery } from "../src/state"
 
 import './App.css'
 
 function App() {
+
+  const { data, loading, error } = useGetProductsQuery();
+  // const [ deleteEvent ] = useDeleteEventMutation()
+  console.log(useGetProductsQuery());
 
   return (
     <>
