@@ -10,7 +10,6 @@ function App() {
   return (
     <>
         <nav>
-           <h1>For Liberty</h1>
           <NavBar />
         </nav>
       <Routes>

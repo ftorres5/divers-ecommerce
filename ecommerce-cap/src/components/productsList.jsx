@@ -1,32 +1,7 @@
 import { useGetProductsQuery } from "../state"
+import { useNavigate } from "react-router-dom";
+import Loading from "./loader";
 
-/*
-  This example requires some changes to your config:
-  
-  ```
-  // tailwind.config.js
-  module.exports = {
-    // ...
-    plugins: [
-      // ...
-      require('@tailwindcss/aspect-ratio'),
-    ],
-  }
-  ```
-*/
-// const products = [
-//     {
-//       id: 1,
-//       name: 'Basic Tee',
-//       href: '#',
-//       imageSrc: 'https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg',
-//       imageAlt: "Front of men's Basic Tee in black.",
-//       price: '$35',
-//       color: 'Black',
-//     },
-//     // More products...
-//   ]
-  
   export default function ProductList() {
 
     const { data, error, isLoading } = useGetProductsQuery();
@@ -34,7 +9,7 @@ import { useGetProductsQuery } from "../state"
     return (
         <>
         {error ? <div>Error</div> : <div></div>}
-        {isLoading ? <div>Loading</div> :
+        {isLoading ? <div><Loading/></div> :
             <div className="bg-white">
                 <div className="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
                 <h2 className="text-2xl font-bold tracking-tight text-gray-900">Products</h2>
@@ -51,7 +26,7 @@ import { useGetProductsQuery } from "../state"
                         <div className="mt-4 flex justify-between">
                         <div>
                             <h3 className="text-sm text-gray-700">
-                            <a href={product.href}>
+                            <a href={`/products/${product.id}`}>
                                 <span aria-hidden="true" className="absolute inset-0" />
                                 {product.title}
                             </a>

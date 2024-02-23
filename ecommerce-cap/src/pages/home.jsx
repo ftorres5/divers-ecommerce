@@ -5,7 +5,7 @@ function Home () {
     <div className="home-wrapper">
       <img
         className="home-image"
-        src="https://source.unsplash.com/F6-U5fGAOik"
+        src="https://editors.dexerto.com/wp-content/uploads/2024/01/10/Helldivers-2-header-img.jpg"
         alt="store front"
       />
       <Link to="/products">
