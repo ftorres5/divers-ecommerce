@@ -3,19 +3,20 @@ import { CheckIcon } from '@heroicons/react/20/solid'
 import { ShieldCheckIcon } from '@heroicons/react/24/outline'
 import Loading from "./loader";
 import { useParams } from 'react-router-dom'
+import { useGetIdQuery } from '../state';
 
-const reviews = { average: 4, totalCount: 1624 }
+// const reviews = { average: 4, totalCount: 1624 }
 
-function classNames(...classes) {
-  return classes.filter(Boolean).join(' ')
-}
+// function classNames(...classes) {
+//   return classes.filter(Boolean).join(' ')
+// }
 
 export default function productDetails() {
   const {itemId} = useParams();
   console.log(`****`, itemId)
-  const { data, error, isLoading } = useGetIdMutation(itemId);
 
-  const [selectedSize, setSelectedSize] = useState(product.sizes[0])
+  const { data, error, isLoading } = useGetIdQuery(itemId);
+console.log(`******`, data)
 
   return (
     <>
@@ -23,13 +24,13 @@ export default function productDetails() {
       {isLoading ? <div><Loading/></div> :
         <div className="bg-white">
           <div className="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:grid lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
-            {data.map((product) => (
+            {data && 
               <div className="lg:max-w-lg lg:self-end">
                 <div className="mt-4">
-                  <h1 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">{product.name}</h1>
+                  <h1 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">{data.title}</h1>
                 </div>
               </div> 
-            ))}
+            }
           </div>  
         </div>
       }

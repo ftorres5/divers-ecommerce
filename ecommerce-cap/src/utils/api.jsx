@@ -10,7 +10,7 @@ export const productsApi = createApi({
       query: () => `products`,
       providesTags: ['Products']
     }),
-    getId: builder.mutation({
+    getId: builder.query({
       query: (id) => ({
         url: `products/${id}`,
         method: 'GET',
@@ -31,4 +31,4 @@ export const productsApi = createApi({
   // middleware:
 });
 
-export const { useGetProductsQuery, useGetIdMutation} = productsApi
+export const { useGetProductsQuery, useGetIdQuery } = productsApi
