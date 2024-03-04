@@ -10,6 +10,13 @@ export const productsApi = createApi({
       query: () => `products`,
       providesTags: ['Products']
     }),
+    getId: builder.query({
+      query: (id) => ({
+        url: `products/${id}`,
+        method: 'GET',
+      }),
+      invalidatesTags: ['Products'],
+    }),
     // addEvent: builder.mutation({
     //   query: (body) => ({
     //     url: `events`,
@@ -18,16 +25,10 @@ export const productsApi = createApi({
     //   }),
     //   invalidatesTags: ['Products'],
     // }),
-    // deleteEvent: builder.mutation({
-    //   query: (id) => ({
-    //     url: `events/${id}`,
-    //     method: 'DELETE',
-    //   }),
-    //   invalidatesTags: ['Products'],
-    // }),
+ 
   }),
   // Can add middleware here if desired
   // middleware:
 });
 
-export const { useGetProductsQuery } = productsApi
+export const { useGetProductsQuery, useGetIdQuery } = productsApi
