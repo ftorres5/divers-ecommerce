@@ -17,18 +17,18 @@ export const productsApi = createApi({
       }),
       invalidatesTags: ['Products'],
     }),
-    // addEvent: builder.mutation({
-    //   query: (body) => ({
-    //     url: `events`,
-    //     method: 'POST',
-    //     body
-    //   }),
-    //   invalidatesTags: ['Products'],
-    // }),
+    userLogin: builder.mutation({
+      query: (body) => ({
+        url: `auth/login`,
+        method: 'POST',
+        body
+      }),
+      invalidatesTags: ['Login'],
+    }),
  
   }),
   // Can add middleware here if desired
   // middleware:
 });
 
-export const { useGetProductsQuery, useGetIdQuery } = productsApi
+export const { useGetProductsQuery, useGetIdQuery, useUserLoginMutation } = productsApi

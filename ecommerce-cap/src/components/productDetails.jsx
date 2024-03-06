@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { CheckIcon } from '@heroicons/react/20/solid'
 import { ShieldCheckIcon } from '@heroicons/react/24/outline'
-import Loading from "./loader";
+import Loading from "./Loader";
 import { useParams } from 'react-router-dom'
 import { useGetIdQuery } from '../state';
 

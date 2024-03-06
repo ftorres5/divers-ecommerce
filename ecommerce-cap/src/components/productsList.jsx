@@ -1,6 +1,6 @@
 import { useGetProductsQuery } from "../state"
 import { useNavigate } from "react-router-dom";
-import Loading from "./loader";
+import Loading from "./Loader";
 
   export default function ProductList() {
 
