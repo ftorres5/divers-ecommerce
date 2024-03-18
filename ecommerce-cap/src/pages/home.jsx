@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 function Home () {
     return (
-    <div className="home-wrapper">
+    <div className="mx-auto max-w-7xl sm:px-6 lg:px-8">
       <img
         className="home-image"
         src="https://editors.dexerto.com/wp-content/uploads/2024/01/10/Helldivers-2-header-img.jpg"
