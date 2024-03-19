@@ -22,6 +22,7 @@ export default function SignIn() {
         const response = await userLogin({ username, password }).unwrap();
         const userToken = response.token;
         dispatch(setToken(userToken));
+        localStorage.setItem('token', userToken)
         console.log(userToken)
         console.log('Login successful!');
         navigate('/')
