@@ -10,9 +10,9 @@ function App() {
   
   return (
     <>
-        <nav>
-          <NavBar />
-        </nav>
+      <nav>
+        <NavBar />
+      </nav>
       <Routes>
             <Route path="/" element={<Home/>}/>
             <Route path="/products" element={<ProductList />} />
