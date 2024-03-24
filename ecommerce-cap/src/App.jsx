@@ -5,6 +5,7 @@ import Home from './pages/home';
 import NavBar from './components/NavBar';
 import './App.css'
 import SignIn from './components/SignIn';
+import Cart from './components/Cart';
 
 function App() {
   
@@ -18,6 +19,7 @@ function App() {
             <Route path="/products" element={<ProductList />} />
             <Route path='/products/:itemId' element={<ProductDetails />}/>
             <Route path='/signin' element={<SignIn />}/>
+            <Route path='/cart' element={<Cart />}/>
       </Routes>
     </>
   )
