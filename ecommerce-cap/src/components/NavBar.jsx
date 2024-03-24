@@ -2,11 +2,12 @@ import { Fragment } from 'react'
 import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import { useSelector } from 'react-redux';
+import getCartItemCount from '../utils/cartCount';
 
 const navigation = [
   { name: 'Home', href: '/', current: true },
   { name: 'Products', href: 'products', current: false },
-  { name: 'Cart', href: '#', current: false },
+  { name: 'Cart', href: 'cart', current: false },
   { name: 'Login', href: 'signin', current: false }
 ]
 
@@ -16,8 +17,10 @@ function classNames(...classes) {
 
  function NavBar() {
 
-  const token = useSelector(state => state.token);
+  const token = localStorage.getItem("token");
+  const cartLength = localStorage.getItem("cartItems");
   console.log(token)
+
 
   return (
     <Disclosure as="nav" className="bg-gray-800">
@@ -65,11 +68,22 @@ function classNames(...classes) {
               </div>
               <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
 
+              {/* Cart Count */}
+              <div class="h-screen flex justify-center items-center">
+                <div class="relative py-2">
+                <div class="t-0 absolute left-3">
+                  <p class="flex h-2 w-2 items-center justify-center rounded-full bg-red-500 p-3 text-xs text-white">{getCartItemCount()}</p>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="file: mt-4 h-6 w-6">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
+                </svg>
+                </div>
+              </div>
+
 
                 {/* Profile dropdown */}
                 { token ? (
                   <>
-                  <p>Logged In</p>
                   <Menu as="div" className="relative ml-3">
                   <div>
                     <Menu.Button className="relative flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">

@@ -26,9 +26,7 @@ test('calls handleLogin function on form submission', async () => {
 
   fireEvent.click(signInButton);
 
-  // You might want to replace the waitFor function with your actual loading logic
   await waitFor(() => {
     expect(console.error).not.toHaveBeenCalled(); // Check if there are no error messages
-    // You can add more assertions here to check for navigation, token setting, etc.
   });
 });
