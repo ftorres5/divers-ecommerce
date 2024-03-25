@@ -43,8 +43,8 @@ function classNames(...classes) {
                 <div className="flex flex-shrink-0 items-center">
                   <img
                     className="h-8 w-auto"
-                    src="../src/assets/logo.png"
-                    alt="Your Company"
+                    src="https://i.ibb.co/7yFy5qR/sjhd5lz62akc1.png"
+                    alt="CIF"
                   />
                 </div>
                 <div className="hidden sm:ml-6 sm:block">
@@ -70,12 +70,12 @@ function classNames(...classes) {
               {/* Cart Count and Checkout */}
               <NavLink to='/checkout'
               >
-              <div className="h-screen flex justify-center items-center">
+              <div className="h-screen flex justify-between items-center">
                 <div className="relative py-2">
                 <div className="t-0 absolute left-3">
                   <p className="flex h-2 w-2 items-center justify-center rounded-full bg-red-500 p-3 text-xs text-white">{getCartItemCount()}</p>
                 </div>
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="file: mt-4 h-6 w-6">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="yellow-200" viewBox="0 0 24 24" strokeWidth="1.5" stroke="yellow" className="file: mt-4 h-6 w-6">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
                 </svg>
                 </div>
@@ -93,7 +93,7 @@ function classNames(...classes) {
                       <span className="sr-only">Open user menu</span>
                       <img
                         className="h-8 w-8 rounded-full"
-                        src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAubL6FaLwVu0T0CEYCqryJVhHDccEVl5h8_6sR62m7IRfglQTs-zX692WUUXa5Ab4geU&usqp=CAU"
                         alt=""
                       />
                     </Menu.Button>
@@ -108,26 +108,6 @@ function classNames(...classes) {
                     leaveTo="transform opacity-0 scale-95"
                   >
                     <Menu.Items className="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
-                      <Menu.Item>
-                        {({ active }) => (
-                          <a
-                            href="#"
-                            className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}
-                          >
-                            Your Profile
-                          </a>
-                        )}
-                      </Menu.Item>
-                      <Menu.Item>
-                        {({ active }) => (
-                          <a
-                            href="#"
-                            className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}
-                          >
-                            Settings
-                          </a>
-                        )}
-                      </Menu.Item>
                       <Menu.Item>
                         {({ active }) => (
                           <a
