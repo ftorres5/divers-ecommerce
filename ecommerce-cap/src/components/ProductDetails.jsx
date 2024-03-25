@@ -9,14 +9,8 @@ import { useSelector } from "react-redux";
 
 export default function productDetails() {
   const {itemId} = useParams();
-  console.log(`****`, itemId)
-
   const { data, error, isLoading } = useGetIdQuery(itemId);
-  console.log(`******`, data)
-
   const cartItems = useSelector(state => state.cart.items);
-  console.log(cartItems)
-
   const dispatch = useDispatch();
 
   const handleAddToCart = () => {
@@ -27,6 +21,8 @@ export default function productDetails() {
       price: data.price,
       quantity: 1 }));
   };
+
+  console.log(cartItems);
 
   return (
     <>
