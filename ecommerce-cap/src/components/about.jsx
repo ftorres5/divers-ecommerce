@@ -2,7 +2,7 @@ export default function About() {
     return (
       <div className="bg-white py-24 sm:py-32 lg:px-4">
         <div className="mx-auto max-w-2xl">
-          <h2 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl text-center">About</h2>
+
             <p className="mt-6 text-lg leading-8 text-gray-600">In the depths of the ocean, where darkness reigns and pressure mounts, there exists a breed of warriors known as helldivers. Among them, none were as renowned as Captain Jack Reynolds. For years, he led his team through treacherous missions, navigating the murky depths with skill and courage.</p>
             
             <p className="mt-6 text-lg leading-8 text-gray-600">But after a particularly harrowing mission that claimed the lives of several of his comrades, Jack made the difficult decision to retire from active duty. Haunted by the memories of his time as a helldiver, Jack sought solace in the calmness of the surface world. He settled in a coastal town, far from the echoing depths of the ocean.</p>

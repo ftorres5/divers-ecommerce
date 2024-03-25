@@ -183,7 +183,7 @@ const Cart = () => {
         {/* Checkout form */}
         <section
           aria-labelledby="payment-heading"
-          className="flex-auto px-4 pb-16 pt-12 sm:px-6 sm:pt-16 lg:px-8 lg:pb-24 lg:pt-0"
+          className="flex-auto overflow-y-auto px-4 pb-16 pt-12 sm:px-6 sm:pt-16 lg:px-8 lg:pb-24 lg:pt-0"
         >
           <div className="mx-auto max-w-lg">
             <div className="hidden pb-16 pt-10 lg:flex">
