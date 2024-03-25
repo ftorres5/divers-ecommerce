@@ -22,6 +22,7 @@ export default function SignIn() {
         const response = await userLogin({ username, password }).unwrap();
         const userToken = response.token;
         dispatch(setToken(userToken));
+        localStorage.setItem('token', userToken)
         console.log(userToken)
         console.log('Login successful!');
         navigate('/')
@@ -33,17 +34,10 @@ export default function SignIn() {
 
     return (
       <>
-        {/*
-          This example requires updating your template:
-  
-          ```
-          <html class="h-full bg-white">
-          <body class="h-full">
-          ```
-        */}
-        <div className="flex min-h-full flex-1">
+      <body className="h-full">
+        <div className="flex h-full flex-1">
           <div className="flex flex-1 flex-col justify-center px-4 py-12 sm:px-6 lg:flex-none lg:px-20 xl:px-24">
-            <div className="mx-auto w-full max-w-sm lg:w-96">
+            <div className="mx-auto w-full lg:w-96">
               <div>
                 <img
                   className="h-10 w-auto"
@@ -108,14 +102,8 @@ export default function SignIn() {
               </div>
             </div>
           </div>
-          <div className="relative hidden w-0 flex-1 lg:block">
-            <img
-              className="absolute inset-0 h-full w-full object-cover"
-              src="https://images.unsplash.com/photo-1496917756835-20cb06e75b4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1908&q=80"
-              alt=""
-            />
-          </div>
         </div>
+        </body>
       </>
     )
   }

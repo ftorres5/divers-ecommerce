@@ -1,19 +1,11 @@
-import ProductList from "./components/productsList";
-import './App.css'
+import ProductList from "../components/ProductsList"
+import Header from "../components/header"
 
-function Products() {
-
-
+export default function Products () {
   return (
     <>
-    <div>
-        <h1>Checkout our Products</h1>
-    </div>
-    <div>
-        <ProductList/>
-    </div>
+    <Header />
+    <ProductList/>
     </>
   )
 }
-
-export default Products
